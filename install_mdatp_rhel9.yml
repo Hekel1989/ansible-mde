@@ -1,0 +1,9 @@
+- hosts: mde_rhel
+  tasks:
+    - include: ../ansible-mde/roles/onboarding_setup.yml
+    - include: ../ansible-mde/roles/add_yum_rhel8_repo.yml
+    - name: Install MDATP
+      dnf:
+        name: mdatp
+        state: latest
+        enablerepo: packages-microsoft-com-prod

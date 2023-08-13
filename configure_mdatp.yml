@@ -1,0 +1,8 @@
+- name: Copy mdatp_managed.json into into /etc/opt/microsoft/mdatp/managed
+  hosts: mde
+  tasks:
+    - name: Copy mdatp_managed.json into into /etc/opt/microsoft/mdatp/managed
+      become: true 
+      copy:
+        src: ../proxmox-olympus/files/mdatp_managed.json
+        dest: /etc/opt/microsoft/mdatp/managed

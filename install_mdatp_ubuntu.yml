@@ -1,0 +1,9 @@
+- hosts: mde_ubuntu
+  tasks:
+    - include: ../ansible-mde/roles/onboarding_setup.yml
+    - include: ../ansible-mde/roles/add_apt_repo.yml
+    - name: Install MDATP
+      apt:
+        name: mdatp
+        state: latest
+        update_cache: yes

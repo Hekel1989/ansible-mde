@@ -1,0 +1,6 @@
+- hosts: mde_ubuntu
+  tasks:
+    - name: Uninstall MDATP
+      apt:
+        name: mdatp
+        state: absent
