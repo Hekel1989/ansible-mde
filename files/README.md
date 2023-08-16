@@ -1,0 +1,3 @@
+mdatp_managed.json
+mdatp_onboard.json
+WindowsDefenderATPOnboardingPackage.zip
